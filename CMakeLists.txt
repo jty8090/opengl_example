@@ -18,11 +18,13 @@ add_executable(${PROJECT_NAME}
   src/vertex_layout.cpp src/vertex_layout.h
   src/image.cpp src/image.h
   src/texture.cpp src/texture.h
+  src/mesh.cpp src/mesh.h
+  src/model.cpp src/model.h
   )
 
 include(Dependency.cmake)
 
-# ìš°ë¦¬ í”„ë¡œì íŠ¸ì— include / lib ê´€ë ¨ ì˜µì…˜ ì¶”ê°€
+# ?š°ë¦? ?”„ë¡œì ?Š¸?— include / lib ê´?? ¨ ?˜µ?…˜ ì¶”ê??
 target_include_directories(${PROJECT_NAME} PUBLIC ${DEP_INCLUDE_DIR})
 target_link_directories(${PROJECT_NAME} PUBLIC ${DEP_LIB_DIR})
 target_link_libraries(${PROJECT_NAME} PUBLIC ${DEP_LIBS})
@@ -33,5 +35,5 @@ target_compile_definitions(${PROJECT_NAME} PUBLIC
   WINDOW_HEIGHT=${WINDOW_HEIGHT}
   )
 
-# Dependencyë“¤ì´ ë¨¼ì € build ë  ìˆ˜ ìˆê²Œ ê´€ê³„ ì„¤ì •
+# Dependency?“¤?´ ë¨¼ì?? build ?  ?ˆ˜ ?ˆê²? ê´?ê³? ?„¤? •
 add_dependencies(${PROJECT_NAME} ${DEP_LIST})
